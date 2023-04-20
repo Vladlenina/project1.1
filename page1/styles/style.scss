@@ -1,0 +1,328 @@
+$font: 'Montserrat', sans-serif;
+$backround-color: #ededed;
+$color: #282828;
+$color-second: #ffc700;
+$color-third: #0499dd;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  box-sizing: border-box;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $font;
+  font-size: 14px;
+}
+img {
+  max-width: 100%;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+button {
+  border: none;
+}
+.wrapper {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.header {
+  min-height: 790px;
+  background-image: url(../../image/page1/main_picture.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 26px;
+  align-items: center;
+}
+.menu {
+  .menu__list {
+    display: flex;
+    font-weight: 500;
+    column-gap: 20px;
+    color: #ffffff;
+  }
+  .menu__link_active {
+    color: $color-second;
+  }
+}
+.header__wrapper-info {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 150px;
+}
+.slogan {
+  display: flex;
+  flex-direction: column;
+  .slogan__travel {
+    font-weight: 700;
+    font-size: 4.5em;
+    line-height: 60px;
+    color: #ffffff;
+  }
+  .slogan__together {
+    font-family: 'Pattaya', sans-serif;
+    font-weight: 400;
+    font-size: 3em;
+    line-height: 20px;
+    color: $color-second;
+    align-self: flex-end;
+  }
+  .slogan__company-name {
+    font-weight: 900;
+    font-size: 6em;
+    line-height: 70px;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #ffffff;
+    font-family: sans-serif;
+  }
+  .slogan__header-btn {
+    margin-top: 60px;
+  }
+}
+.button {
+  background: linear-gradient(92.71deg, #0499dd 0%, #17c1bc 100%);
+  border-radius: 60px;
+  font-family: $font;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 16px;
+  width: 17em;
+}
+.header__app {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 13px;
+}
+.main {
+  background-color: #fbfbfb;
+}
+.content-photo {
+  display: flex;
+  justify-content: flex-end;
+  .content-photo__img {
+    margin-top: -115px;
+  }
+}
+.excursions__wrapper {
+  padding-top: 150px;
+}
+.excursions {
+  .excursions__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .excursions__popular {
+      font-weight: 700;
+      font-size: 24px;
+      color: $color-third;
+    }
+    .excursions__more {
+      font-size: 12px;
+      text-decoration-line: underline;
+      color: $color;
+    }
+  }
+}
+.excursions__slider {
+  padding-top: 90px;
+  display: flex;
+  column-gap: 20px;
+}
+.slider {
+  min-height: 500px;
+  max-width: 360px;
+  padding: 0 16px 40px 16px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  .slider__title {
+    font-weight: 500;
+    font-size: 12px;
+    color: #ffffff;
+  }
+  .slider__name {
+    font-weight: 700;
+    line-height: 17px;
+    color: $color-second;
+  }
+  .slider__hours-price {
+    padding: 10px 0 10px 0;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 12px;
+  }
+  .slider__hours {
+    background: url(../../image/page1/icon_clock.svg) no-repeat;
+    background-position: center left;
+    padding-left: 20px;
+  }
+  .slider__price {
+    background: url(../../image/page1/icon_coins.svg) no-repeat;
+    background-position: center left;
+    padding-left: 20px;
+  }
+  .slider__info {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #ffffff;
+  }
+  .slider__btn {
+    width: 13em;
+    font-size: 12px;
+    padding: 12px;
+    margin-top: 15px;
+  }
+}
+.excursions__bus-tour {
+  background-image: url(../../image/page1/slider_1.png);
+}
+.excursions__equestrian-tour {
+  background-image: url(../../image/page1/slider_2.png);
+}
+.excursions__quad-tour {
+  background-image: url(../../image/page1/slider_3.png);
+}
+.about {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  .about__inner {
+    display: flex;
+    align-items: center;
+    min-height: 750px;
+    background-image: url(../../image/page1/deco_picture2.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    // background-size: 80% 85vh;
+    border-radius: 0px 10px 10px 0px;
+  }
+  .about__info {
+    max-width: 500px;
+    padding: 60px;
+    background-color: $backround-color;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: 11%;
+    background-size: contain;
+  }
+  .about__title {
+    font-weight: 700;
+    font-size: 24px;
+    color: $color-third;
+  }
+  .about__text,
+  .about__text-second {
+    font-weight: 500;
+    font-size: 14px;
+    color: $color;
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  background-color: $backround-color;
+  min-height: 173px;
+  font-weight: 500;
+  color: $color;
+  .footer__wrapper {
+    display: grid;
+    grid-template-columns: 80px 1fr 12em;
+    grid-template-rows: 55px 55px;
+    grid-template-areas:
+      'footer-logo footer-menu-contacts footer-mail'
+      'footer-logo footer-menu-contacts footer-app';
+    align-items: center;
+  }
+  .footer__logo {
+    grid-area: footer-logo;
+  }
+  .footer__menu-contacts {
+    grid-area: footer-menu-contacts;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.footer__menu {
+  padding-left: 12%;
+  .footer__menu-list {
+    display: grid;
+    row-gap: 8px;
+    padding: 0;
+    margin: 0;
+  }
+}
+.footer__contacts {
+  display: grid;
+  padding-right: 12%;
+  row-gap: 4px;
+  .footer__contacts-whatsapp {
+    background: url(../../image/header_footer/icon_whatsapp_footer.svg)
+      no-repeat;
+    background-position: center left;
+    padding: 2px 0 2px 30px;
+  }
+  .footer__contacts-telegram {
+    background: url(../../image/header_footer/icon_telegram_footer.svg)
+      no-repeat;
+    background-position: center left;
+    padding: 2px 0 2px 30px;
+  }
+}
+.footer__mail {
+  text-align: bottom;
+  grid-area: footer-mail;
+  .footer__mail-ico {
+    background: url(../../image/header_footer/icon_mail_footer.svg) no-repeat;
+    padding-left: 30px;
+    background-position: center left;
+  }
+}
+.footer__app {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-area: footer-app;
+  max-width: 112px;
+  align-self: baseline;
+}
+@media screen and (min-width: 1024px) {
+  .menu-mobile {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .menu {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+}

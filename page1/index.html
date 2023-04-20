@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="./styles/normalize.css" /> -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header__wrapper wrapper">
+          <img
+            src="../image/header_footer/header-logo.svg"
+            class="header__logo"
+            alt="header-logo"
+          />
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link menu__link_active" href="#">Главная</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Экскурсии</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Личный кабинет</a>
+              </li>
+            </ul>
+          </nav>
+          <a class="menu-mobile" href="#">
+            <img
+              src="../image/header_footer/header-menu.png"
+              class="menu-mobile__icon"
+              alt="menu"
+            />
+          </a>
+        </div>
+        <div class="header__wrapper-info wrapper">
+          <div class="slogan">
+            <span class="slogan__travel">ПУТЕШЕСТВУЙ</span>
+            <span class="slogan__together">вместе с</span>
+            <span class="slogan__company-name">PERO TRAVEL</span>
+            <button type="button" class="button slogan__header-btn">
+              К экскурсиям
+              <img src="../image/page1/icon_arrow.svg" alt="arrow" />
+            </button>
+          </div>
+          <div class="header__app">
+            <a href="#" class="header__app-vk"
+              ><img src="../image/page1/icon_vk.svg" alt="vk"
+            /></a>
+            <a href="#" class="header__app-inst"
+              ><img src="../image/page1/icon_inst.svg" alt="inst"
+            /></a>
+            <a href="#" class="header__app-facebook"
+              ><img src="../image/page1/icon_facebook.svg" alt="facebook"
+            /></a>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="content-photo wrapper">
+          <img
+            src="../image/page1/content-photo.png"
+            class="content-photo__img"
+            alt="boat"
+          />
+        </div>
+        <section class="excursions">
+          <div class="excursions__wrapper wrapper">
+            <div class="excursions__title">
+              <span class="excursions__popular">Популярные экскурсии</span>
+              <a href="#" class="excursions__more">Смотреть все</a>
+            </div>
+            <div class="excursions__slider">
+              <div class="slider excursions__bus-tour">
+                <span class="slider__title">Автобусный тур</span>
+                <span class="slider__name">Обзорная по Сочи (из Адлера)</span>
+                <span class="slider__hours-price"
+                  ><span class="slider__hours">6 часов</span>
+                  <span class="slider__price">618 ₽</span></span
+                >
+                <p class="slider__info">
+                  Приглашаем вас на экскурсию "Обзорная по Большому Сочи":
+                  Экскурсия начнется с подъёма на гору Большой Ахун - это высшая
+                  точка (665 метров) на побережьи Сочи. На вершине горы Большой
+                  Ахун есть смотровая башня, построенная в 1935-36 годах по
+                  проекту архитектора С. И. Воробьева...
+                </p>
+                <button type="button" class="button slider__btn">
+                  Подробнее
+                </button>
+              </div>
+              <div class="slider excursions__equestrian-tour">
+                <span class="slider__title">Конный тур</span>
+                <span class="slider__name">Конные прогулки</span>
+                <span class="slider__hours-price"
+                  ><span class="slider__hours">1,5 часа</span>
+                  <span class="slider__price">1 809 ₽</span></span
+                >
+                <p class="slider__info">
+                  Конные прогулки проходят в Лазурной долине. С долины
+                  открывается красивый вид на море, горы и лес. На всем пути
+                  следования экскурсии вас будут сопровождать опытные
+                  инструктора. Катание на лошадях или иппотерапия очень полезна
+                  для детей и взрослых...
+                </p>
+                <button type="button" class="button slider__btn">
+                  Подробнее
+                </button>
+              </div>
+              <div class="slider excursions__quad-tour">
+                <span class="slider__title">Квадротур</span>
+                <span class="slider__name">Пасть дракона</span>
+                <span class="slider__hours-price"
+                  ><span class="slider__hours">2,5 часа</span>
+                  <span class="slider__price">3 515 ₽</span></span
+                >
+                <p class="slider__info">
+                  Маршрут на Квадроциклах проходит по горной реке Мзымта вдоль
+                  белых скал и самшитовый лес к водопаду Глубокий Яр или "Пасть
+                  Дракона" (экскурсионное название). Высота водопада 41,5 метр -
+                  это один из самых высоких водопадов Большого Сочи...
+                </p>
+                <button type="button" class="button slider__btn">
+                  Подробнее
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="about">
+            <div class="about__inner">
+              <div class="about__info">
+                <h2 class="about__title">О нас</h2>
+                <p class="about__text">
+                  PeroTravel - Первый онлайн-сервис по бронированию экскурсий
+                  без очередей и операторов. Lorem ipsum dolor sit amet,
+                  consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                  ea commodo consequat.
+                </p>
+                <p class="about__text-second">
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium, totam rem aperiam, eaque
+                  ipsa quae ab illo inventore veritatis et quasi architecto
+                  beatae vitae dicta sunt explicabo.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-1__excursions"></div>
+          <section class="section-2">
+            <div class="section-2__gallery"></div>
+            <div class="section-2__feedback"></div>
+            <div class="section-2__form"></div>
+          </section>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__wrapper wrapper">
+          <img
+            src="../image/header_footer/footer_logo.svg"
+            class="footer__logo"
+            alt="footer-logo"
+          />
+          <div class="footer__menu-contacts">
+            <nav class="footer__menu">
+              <ul class="footer__menu-list">
+                <li class="footer__menu-item">
+                  <a class="footer__menu-link" href="#">Главная</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a class="footer__menu-link" href="#">Экскурсии</a>
+                </li>
+                <li class="footer__menu-item">
+                  <a class="footer__menu-link" href="#">Личный кабинет</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="footer__contacts">
+              <a href="#" class="footer__contacts-whatsapp">+7 964 944 18 74</a>
+              <a href="#" class="footer__contacts-telegram">+7 918 919 98 28</a>
+              <a href="#" class="footer__contacts-telegram"
+                >Телеграм-бот PeroTravel</a
+              >
+            </div>
+          </div>
+          <div class="footer__mail">
+            <a href="#" class="footer__mail-ico">office@perotravel.ru</a>
+          </div>
+          <div class="footer__app">
+            <a href="#" class="footer__app-vk"
+              ><img src="../image/header_footer/icon_vk_footer.svg" alt="vk"
+            /></a>
+            <a href="#" class="footer__app-inst"
+              ><img
+                src="../image/header_footer/icon_inst_footer.svg"
+                alt="inst"
+            /></a>
+            <a href="#" class="footer__app-facebook"
+              ><img
+                src="../image/header_footer/icon_facebook_footer.svg"
+                alt="facebook"
+            /></a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
