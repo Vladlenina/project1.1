@@ -30,10 +30,13 @@ a {
 
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 button {
   border: none;
+  background-color: none;
 }
 
 .wrapper {
@@ -131,13 +134,27 @@ button {
 .content-photo {
   display: flex;
   justify-content: flex-end;
+  transform: translateY(-125px);
 }
-.content-photo .content-photo__img {
-  margin-top: -115px;
+.content-photo .content-photo__inner {
+  position: relative;
+}
+.content-photo .content-photo__play-icon {
+  background-image: url(../../image/page1/content-photo_play.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 1;
+  display: block;
+  width: 80px;
+  height: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
 }
 
 .excursions__wrapper {
-  padding-top: 150px;
+  padding-top: 40px;
 }
 
 .excursions .excursions__title {
@@ -230,6 +247,8 @@ button {
   padding-bottom: 150px;
 }
 .about .about__inner {
+  max-width: 1440px;
+  margin: auto;
   display: flex;
   align-items: center;
   min-height: 750px;
@@ -240,7 +259,7 @@ button {
 }
 .about .about__info {
   max-width: 500px;
-  padding: 60px;
+  padding: 40px 60px 60px 60px;
   background-color: #ededed;
   border-radius: 10px;
   margin-left: auto;
@@ -252,8 +271,7 @@ button {
   font-size: 24px;
   color: #0499dd;
 }
-.about .about__text,
-.about .about__text-second {
+.about .about__text {
   font-weight: 500;
   font-size: 14px;
   color: #282828;
@@ -269,7 +287,7 @@ button {
 }
 .footer .footer__wrapper {
   display: grid;
-  grid-template-columns: 80px 1fr 12em;
+  grid-template-columns: 80px 1fr 13em;
   grid-template-rows: 55px 55px;
   grid-template-areas: "footer-logo footer-menu-contacts footer-mail" "footer-logo footer-menu-contacts footer-app";
   align-items: center;
@@ -282,38 +300,36 @@ button {
   display: flex;
   justify-content: space-between;
 }
-
-.footer__menu {
+.footer .footer__menu {
   padding-left: 12%;
 }
-.footer__menu .footer__menu-list {
+.footer .footer__menu-list {
   display: grid;
   row-gap: 8px;
-  padding: 0;
-  margin: 0;
 }
-
-.footer__contacts {
+.footer .footer__contacts {
   display: grid;
   padding-right: 12%;
   row-gap: 4px;
 }
-.footer__contacts .footer__contacts-whatsapp {
+
+.footer__contacts-whatsapp {
   background: url(../../image/header_footer/icon_whatsapp_footer.svg) no-repeat;
   background-position: center left;
   padding: 2px 0 2px 30px;
 }
-.footer__contacts .footer__contacts-telegram {
+
+.footer__contacts-telegram {
   background: url(../../image/header_footer/icon_telegram_footer.svg) no-repeat;
   background-position: center left;
   padding: 2px 0 2px 30px;
 }
 
 .footer__mail {
-  text-align: bottom;
   grid-area: footer-mail;
 }
-.footer__mail .footer__mail-ico {
+
+.footer__mail-ico {
   background: url(../../image/header_footer/icon_mail_footer.svg) no-repeat;
   padding-left: 30px;
   background-position: center left;
@@ -333,13 +349,100 @@ button {
     display: none;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .menu {
     display: none;
   }
 }
-@media screen and (max-width: 767px) {
-  .menu {
+@media screen and (max-width: 980px) {
+  .excursions__quad-tour {
     display: none;
+  }
+  .excursions__slider {
+    display: flex;
+    justify-content: center;
+  }
+  .content-photo {
+    transform: translateY(-100px);
+  }
+  .content-photo__inner {
+    width: 20em;
+  }
+}
+@media screen and (max-width: 830px) {
+  .slogan .slogan__travel {
+    font-size: 3.5em;
+  }
+  .slogan .slogan__together {
+    font-size: 2.5em;
+  }
+  .slogan .slogan__company-name {
+    font-size: 5em;
+  }
+  .footer {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .footer {
+    display: block;
+  }
+  .footer .footer__wrapper {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 120px 1fr 1fr 20px;
+    grid-template-areas: "footer-logo " "footer-app" "footer-menu-contacts" "footer-mail";
+  }
+  .footer .footer__logo {
+    margin: auto;
+  }
+  .footer .footer__menu-contacts {
+    padding-top: 20px;
+  }
+  .footer .footer__menu {
+    padding-left: 0;
+  }
+  .footer .footer__contacts {
+    margin-left: auto;
+    padding: 0;
+  }
+  .footer .footer__mail {
+    margin-left: auto;
+    padding-right: 28px;
+  }
+  .footer .footer__app {
+    margin: auto;
+    align-self: center;
+  }
+}
+@media screen and (max-width: 680px) {
+  .header__wrapper-info {
+    display: block;
+  }
+  .header__app {
+    align-items: flex-end;
+  }
+}
+@media screen and (max-width: 620px) {
+  .excursions__equestrian-tour {
+    display: none;
+  }
+  .excursions__more {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .slogan .slogan__travel {
+    font-size: 2.5em;
+  }
+  .slogan .slogan__together {
+    font-size: 2em;
+  }
+  .slogan .slogan__company-name {
+    font-size: 4.3em;
   }
 }/*# sourceMappingURL=style.css.map */

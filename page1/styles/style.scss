@@ -30,9 +30,12 @@ a {
 }
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 button {
   border: none;
+  background-color: none;
 }
 .wrapper {
   max-width: 1140px;
@@ -121,12 +124,28 @@ button {
 .content-photo {
   display: flex;
   justify-content: flex-end;
-  .content-photo__img {
-    margin-top: -115px;
+  transform: translateY(-125px);
+  .content-photo__inner {
+    // width: 360px;
+    // height: 227px;
+    position: relative;
+  }
+  .content-photo__play-icon {
+    background-image: url(../../image/page1/content-photo_play.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 1;
+    display: block;
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    top: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
   }
 }
 .excursions__wrapper {
-  padding-top: 150px;
+  padding-top: 40px;
 }
 .excursions {
   .excursions__title {
@@ -212,18 +231,19 @@ button {
   padding-top: 150px;
   padding-bottom: 150px;
   .about__inner {
+    max-width: 1440px;
+    margin: auto;
     display: flex;
     align-items: center;
     min-height: 750px;
     background-image: url(../../image/page1/deco_picture2.png);
     background-repeat: no-repeat;
     background-position: 0 0;
-    // background-size: 80% 85vh;
     border-radius: 0px 10px 10px 0px;
   }
   .about__info {
     max-width: 500px;
-    padding: 60px;
+    padding: 40px 60px 60px 60px;
     background-color: $backround-color;
     border-radius: 10px;
     margin-left: auto;
@@ -235,8 +255,7 @@ button {
     font-size: 24px;
     color: $color-third;
   }
-  .about__text,
-  .about__text-second {
+  .about__text {
     font-weight: 500;
     font-size: 14px;
     color: $color;
@@ -252,7 +271,7 @@ button {
   color: $color;
   .footer__wrapper {
     display: grid;
-    grid-template-columns: 80px 1fr 12em;
+    grid-template-columns: 80px 1fr 13em;
     grid-template-rows: 55px 55px;
     grid-template-areas:
       'footer-logo footer-menu-contacts footer-mail'
@@ -267,42 +286,41 @@ button {
     display: flex;
     justify-content: space-between;
   }
-}
-.footer__menu {
-  padding-left: 12%;
+  .footer__menu {
+    padding-left: 12%;
+  }
   .footer__menu-list {
     display: grid;
     row-gap: 8px;
-    padding: 0;
-    margin: 0;
+  }
+
+  .footer__contacts {
+    display: grid;
+    padding-right: 12%;
+    row-gap: 4px;
   }
 }
-.footer__contacts {
-  display: grid;
-  padding-right: 12%;
-  row-gap: 4px;
-  .footer__contacts-whatsapp {
-    background: url(../../image/header_footer/icon_whatsapp_footer.svg)
-      no-repeat;
-    background-position: center left;
-    padding: 2px 0 2px 30px;
-  }
-  .footer__contacts-telegram {
-    background: url(../../image/header_footer/icon_telegram_footer.svg)
-      no-repeat;
-    background-position: center left;
-    padding: 2px 0 2px 30px;
-  }
+.footer__contacts-whatsapp {
+  background: url(../../image/header_footer/icon_whatsapp_footer.svg) no-repeat;
+  background-position: center left;
+  padding: 2px 0 2px 30px;
 }
+.footer__contacts-telegram {
+  background: url(../../image/header_footer/icon_telegram_footer.svg) no-repeat;
+  background-position: center left;
+  padding: 2px 0 2px 30px;
+}
+
 .footer__mail {
-  text-align: bottom;
+  // text-align: bottom;
   grid-area: footer-mail;
-  .footer__mail-ico {
-    background: url(../../image/header_footer/icon_mail_footer.svg) no-repeat;
-    padding-left: 30px;
-    background-position: center left;
-  }
 }
+.footer__mail-ico {
+  background: url(../../image/header_footer/icon_mail_footer.svg) no-repeat;
+  padding-left: 30px;
+  background-position: center left;
+}
+
 .footer__app {
   display: flex;
   align-items: center;
@@ -316,13 +334,135 @@ button {
     display: none;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+// @media screen and (min-width: 768px) and (max-width: 1024px) {
+//   .wrapper {
+//     max-width: 610px;
+//   }
+// }
+
+@media screen and (max-width: 1024px) {
   .menu {
     display: none;
   }
 }
-@media screen and (max-width: 767px) {
-  .menu {
+@media screen and (max-width: 980px) {
+  .excursions__quad-tour {
     display: none;
+  }
+  .excursions__slider {
+    display: flex;
+    justify-content: center;
+  }
+  .content-photo {
+    transform: translateY(-100px);
+  }
+  .content-photo__inner {
+    width: 20em;
+  }
+}
+@media screen and (max-width: 830px) {
+  .slogan {
+    .slogan__travel {
+      font-size: 3.5em;
+    }
+    .slogan__together {
+      font-size: 2.5em;
+    }
+    .slogan__company-name {
+      font-size: 5em;
+    }
+  }
+  .footer {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .footer {
+    display: block;
+    .footer__wrapper {
+      padding-left: 25px;
+      padding-right: 25px;
+      padding-top: 40px;
+      padding-bottom: 50px;
+      justify-content: center;
+      grid-template-columns: 1fr;
+      grid-template-rows: 120px 1fr 1fr 20px;
+      grid-template-areas:
+        'footer-logo '
+        'footer-app'
+        'footer-menu-contacts'
+        'footer-mail';
+    }
+    .footer__logo {
+      margin: auto;
+    }
+    .footer__menu-contacts {
+      padding-top: 20px;
+    }
+    .footer__menu {
+      padding-left: 0;
+    }
+    // .footer__menu-list {
+    //   display: grid;
+    //   row-gap: 8px;
+    // }
+  }
+  .footer {
+    .footer__contacts {
+      margin-left: auto;
+      padding: 0;
+    }
+
+    .footer__mail {
+      margin-left: auto;
+      padding-right: 28px;
+    }
+    .footer__app {
+      margin: auto;
+      align-self: center;
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .header__wrapper-info {
+    display: block;
+  }
+  .slogan {
+    .slogan__together {
+      // padding-right: 15%;
+    }
+  }
+
+  .header__app {
+    align-items: flex-end;
+  }
+}
+@media screen and (max-width: 620px) {
+  .excursions__equestrian-tour {
+    display: none;
+  }
+  .excursions__more {
+    display: none;
+  }
+}
+// @media screen and (max-width: 650px) {
+//   .footer {
+//     font-size: 11px;
+//   }
+
+// }
+@media screen and (max-width: 500px) {
+  .slogan {
+    .slogan__travel {
+      font-size: 2.5em;
+    }
+    .slogan__together {
+      font-size: 2em;
+      // padding-right: 35%;
+    }
+    .slogan__company-name {
+      font-size: 4.3em;
+    }
   }
 }
