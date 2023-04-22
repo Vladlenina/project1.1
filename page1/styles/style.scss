@@ -17,7 +17,6 @@ html {
 html,
 body {
   padding: 0;
-  margin: 0;
   font-family: $font;
   font-size: 14px;
 }
@@ -35,7 +34,6 @@ ul {
 }
 button {
   border: none;
-  background-color: none;
 }
 .wrapper {
   max-width: 1140px;
@@ -126,8 +124,6 @@ button {
   justify-content: flex-end;
   transform: translateY(-125px);
   .content-photo__inner {
-    // width: 360px;
-    // height: 227px;
     position: relative;
   }
   .content-photo__play-icon {
@@ -145,7 +141,7 @@ button {
   }
 }
 .excursions__wrapper {
-  padding-top: 40px;
+  padding-top: 30px;
 }
 .excursions {
   .excursions__title {
@@ -228,8 +224,8 @@ button {
   background-image: url(../../image/page1/slider_3.png);
 }
 .about {
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 120px;
+  padding-bottom: 120px;
   .about__inner {
     max-width: 1440px;
     margin: auto;
@@ -312,7 +308,6 @@ button {
 }
 
 .footer__mail {
-  // text-align: bottom;
   grid-area: footer-mail;
 }
 .footer__mail-ico {
@@ -334,32 +329,9 @@ button {
     display: none;
   }
 }
-// @media screen and (min-width: 768px) and (max-width: 1024px) {
-//   .wrapper {
-//     max-width: 610px;
-//   }
-// }
-
 @media screen and (max-width: 1024px) {
-  // .wrapper {
-  //   max-width: 800px;
-  // }
   .menu {
     display: none;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .wrapper {
-    max-width: 610px;
-  }
-}
-@media screen and (max-width: 980px) {
-  .excursions__quad-tour {
-    display: none;
-  }
-  .excursions__slider {
-    display: flex;
-    justify-content: center;
   }
   .content-photo {
     transform: translateY(-100px);
@@ -367,73 +339,112 @@ button {
   .content-photo__inner {
     width: 20em;
   }
+  .excursions__quad-tour {
+    display: none;
+  }
+  .excursions__slider {
+    display: flex;
+    justify-content: center;
+  }
+  .footer {
+    font-size: 12px;
+  }
 }
-@media screen and (max-width: 830px) {
-  // .wrapper {
-  //   max-width: 700px;
-  // }
+@media screen and (min-width: 680px) and (max-width: 1024px) {
+  .wrapper {
+    max-width: 610px;
+  }
+  .header {
+    min-height: 900px;
+    background-image: url(../../image/page1/header_picture-tablet.png);
+  }
   .slogan {
     .slogan__travel {
       font-size: 3.5em;
     }
     .slogan__together {
       font-size: 2.5em;
+      padding-right: 80px;
+      line-height: 10px;
     }
     .slogan__company-name {
-      font-size: 5em;
+      font-size: 5.5em;
+    }
+  }
+  .about {
+    .about__inner {
+      background-image: url(../../image/page1/about__inner-tablet.png);
+    }
+    .about__info {
+      max-width: 450px;
+      padding: 30px 50px 50px 50px;
     }
   }
   .footer {
-    font-size: 12px;
+    .footer__menu {
+      padding-left: 8%;
+    }
+    .footer__contacts {
+      padding-right: 5%;
+    }
   }
 }
-// @media screen and (max-width: 750px) {
-//   .wrapper {
-//     max-width: 630px;
-//   }
-// }
 
 @media screen and (max-width: 680px) {
-  // .wrapper {
-  //   max-width: 540px;
-  // }
+  .wrapper {
+    max-width: 480px;
+  }
+  .header {
+    min-height: 930px;
+    background-image: url(../../image/page1/header_picture-mobile.png);
+  }
   .header__wrapper-info {
+    padding-top: 110px;
     display: block;
   }
   .slogan {
+    .slogan__travel {
+      font-size: 2.5em;
+    }
     .slogan__together {
-      padding-right: 15%;
+      font-size: 2em;
+      padding-right: 30%;
+      line-height: 5px;
+    }
+    .slogan__company-name {
+      font-size: 4.3em;
+      line-height: 55px;
     }
   }
-
   .header__app {
+    padding-top: 70px;
     align-items: flex-end;
-  }
-}
-
-@media screen and (max-width: 620px) {
-  .excursions__equestrian-tour {
-    display: none;
   }
   .excursions__more {
     display: none;
   }
-}
-// @media screen and (max-width: 650px) {
-//   .footer {
-//     font-size: 11px;
-//   }
-
-// }
-
-@media screen and (max-width: 500px) {
+  .excursions__equestrian-tour {
+    display: none;
+  }
+  .about {
+    .about__inner {
+      background-image: url(../../image/page1/about__inner-mobile.png);
+      min-height: 700px;
+    }
+    .about__info {
+      max-width: 380px;
+      padding: 20px 30px 30px 30px;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+    .about__text {
+      font-size: 12px;
+    }
+  }
   .footer {
     display: block;
     .footer__wrapper {
-      padding-left: 25px;
-      padding-right: 25px;
-      padding-top: 40px;
-      padding-bottom: 50px;
+      padding: 35px 25px 45px 25px;
       justify-content: center;
       grid-template-columns: 1fr;
       grid-template-rows: 120px 1fr 1fr 20px;
@@ -452,36 +463,38 @@ button {
     .footer__menu {
       padding-left: 0;
     }
-    // .footer__menu-list {
-    //   display: grid;
-    //   row-gap: 8px;
-    // }
   }
   .footer {
     .footer__contacts {
       margin-left: auto;
       padding: 0;
     }
-
     .footer__mail {
       margin-left: auto;
       padding-right: 28px;
     }
     .footer__app {
+      display: flex;
       margin: auto;
       align-self: center;
+      column-gap: 14px;
     }
   }
+}
+@media screen and (max-width: 500px) {
+  .wrapper {
+    max-width: 380px;
+  }
   .slogan {
-    .slogan__travel {
-      font-size: 2.5em;
-    }
     .slogan__together {
-      font-size: 2em;
-      padding-right: 35%;
+      padding-right: 10%;
     }
-    .slogan__company-name {
-      font-size: 4.3em;
+  }
+  .excursions {
+    .excursions__title {
+      .excursions__popular {
+        font-size: 20px;
+      }
     }
   }
 }

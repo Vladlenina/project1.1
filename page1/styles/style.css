@@ -14,7 +14,6 @@ html {
 html,
 body {
   padding: 0;
-  margin: 0;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
 }
@@ -36,7 +35,6 @@ ul {
 
 button {
   border: none;
-  background-color: none;
 }
 
 .wrapper {
@@ -154,7 +152,7 @@ button {
 }
 
 .excursions__wrapper {
-  padding-top: 40px;
+  padding-top: 30px;
 }
 
 .excursions .excursions__title {
@@ -243,8 +241,8 @@ button {
 }
 
 .about {
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .about .about__inner {
   max-width: 1440px;
@@ -353,13 +351,12 @@ button {
   .menu {
     display: none;
   }
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .wrapper {
-    max-width: 610px;
+  .content-photo {
+    transform: translateY(-100px);
   }
-}
-@media screen and (max-width: 980px) {
+  .content-photo__inner {
+    width: 20em;
+  }
   .excursions__quad-tour {
     display: none;
   }
@@ -367,55 +364,95 @@ button {
     display: flex;
     justify-content: center;
   }
-  .content-photo {
-    transform: translateY(-100px);
-  }
-  .content-photo__inner {
-    width: 20em;
+  .footer {
+    font-size: 12px;
   }
 }
-@media screen and (max-width: 830px) {
+@media screen and (min-width: 680px) and (max-width: 1024px) {
+  .wrapper {
+    max-width: 610px;
+  }
+  .header {
+    min-height: 900px;
+    background-image: url(../../image/page1/header_picture-tablet.png);
+  }
   .slogan .slogan__travel {
     font-size: 3.5em;
   }
   .slogan .slogan__together {
     font-size: 2.5em;
+    padding-right: 80px;
+    line-height: 10px;
   }
   .slogan .slogan__company-name {
-    font-size: 5em;
+    font-size: 5.5em;
   }
-  .footer {
-    font-size: 12px;
+  .about .about__inner {
+    background-image: url(../../image/page1/about__inner-tablet.png);
+  }
+  .about .about__info {
+    max-width: 450px;
+    padding: 30px 50px 50px 50px;
+  }
+  .footer .footer__menu {
+    padding-left: 8%;
+  }
+  .footer .footer__contacts {
+    padding-right: 5%;
   }
 }
 @media screen and (max-width: 680px) {
+  .wrapper {
+    max-width: 480px;
+  }
+  .header {
+    min-height: 930px;
+    background-image: url(../../image/page1/header_picture-mobile.png);
+  }
   .header__wrapper-info {
+    padding-top: 110px;
     display: block;
   }
+  .slogan .slogan__travel {
+    font-size: 2.5em;
+  }
   .slogan .slogan__together {
-    padding-right: 15%;
+    font-size: 2em;
+    padding-right: 30%;
+    line-height: 5px;
+  }
+  .slogan .slogan__company-name {
+    font-size: 4.3em;
+    line-height: 55px;
   }
   .header__app {
+    padding-top: 70px;
     align-items: flex-end;
-  }
-}
-@media screen and (max-width: 620px) {
-  .excursions__equestrian-tour {
-    display: none;
   }
   .excursions__more {
     display: none;
   }
-}
-@media screen and (max-width: 500px) {
+  .excursions__equestrian-tour {
+    display: none;
+  }
+  .about .about__inner {
+    background-image: url(../../image/page1/about__inner-mobile.png);
+    min-height: 700px;
+  }
+  .about .about__info {
+    max-width: 380px;
+    padding: 20px 30px 30px 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .about .about__text {
+    font-size: 12px;
+  }
   .footer {
     display: block;
   }
   .footer .footer__wrapper {
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 40px;
-    padding-bottom: 50px;
+    padding: 35px 25px 45px 25px;
     justify-content: center;
     grid-template-columns: 1fr;
     grid-template-rows: 120px 1fr 1fr 20px;
@@ -439,17 +476,21 @@ button {
     padding-right: 28px;
   }
   .footer .footer__app {
+    display: flex;
     margin: auto;
     align-self: center;
+    -moz-column-gap: 14px;
+         column-gap: 14px;
   }
-  .slogan .slogan__travel {
-    font-size: 2.5em;
+}
+@media screen and (max-width: 500px) {
+  .wrapper {
+    max-width: 380px;
   }
   .slogan .slogan__together {
-    font-size: 2em;
-    padding-right: 35%;
+    padding-right: 10%;
   }
-  .slogan .slogan__company-name {
-    font-size: 4.3em;
+  .excursions .excursions__title .excursions__popular {
+    font-size: 20px;
   }
 }/*# sourceMappingURL=style.css.map */
