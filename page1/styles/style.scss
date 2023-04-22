@@ -45,7 +45,7 @@ button {
 }
 .header {
   min-height: 790px;
-  background-image: url(../../image/page1/main_picture.png);
+  background-image: url(../../image/page1/header_picture.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -236,7 +236,7 @@ button {
     display: flex;
     align-items: center;
     min-height: 750px;
-    background-image: url(../../image/page1/deco_picture2.png);
+    background-image: url(../../image/page1/about__inner.png);
     background-repeat: no-repeat;
     background-position: 0 0;
     border-radius: 0px 10px 10px 0px;
@@ -341,8 +341,16 @@ button {
 // }
 
 @media screen and (max-width: 1024px) {
+  // .wrapper {
+  //   max-width: 800px;
+  // }
   .menu {
     display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .wrapper {
+    max-width: 610px;
   }
 }
 @media screen and (max-width: 980px) {
@@ -361,6 +369,9 @@ button {
   }
 }
 @media screen and (max-width: 830px) {
+  // .wrapper {
+  //   max-width: 700px;
+  // }
   .slogan {
     .slogan__travel {
       font-size: 3.5em;
@@ -376,6 +387,45 @@ button {
     font-size: 12px;
   }
 }
+// @media screen and (max-width: 750px) {
+//   .wrapper {
+//     max-width: 630px;
+//   }
+// }
+
+@media screen and (max-width: 680px) {
+  // .wrapper {
+  //   max-width: 540px;
+  // }
+  .header__wrapper-info {
+    display: block;
+  }
+  .slogan {
+    .slogan__together {
+      padding-right: 15%;
+    }
+  }
+
+  .header__app {
+    align-items: flex-end;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .excursions__equestrian-tour {
+    display: none;
+  }
+  .excursions__more {
+    display: none;
+  }
+}
+// @media screen and (max-width: 650px) {
+//   .footer {
+//     font-size: 11px;
+//   }
+
+// }
+
 @media screen and (max-width: 500px) {
   .footer {
     display: block;
@@ -422,44 +472,13 @@ button {
       align-self: center;
     }
   }
-}
-
-@media screen and (max-width: 680px) {
-  .header__wrapper-info {
-    display: block;
-  }
-  .slogan {
-    .slogan__together {
-      // padding-right: 15%;
-    }
-  }
-
-  .header__app {
-    align-items: flex-end;
-  }
-}
-@media screen and (max-width: 620px) {
-  .excursions__equestrian-tour {
-    display: none;
-  }
-  .excursions__more {
-    display: none;
-  }
-}
-// @media screen and (max-width: 650px) {
-//   .footer {
-//     font-size: 11px;
-//   }
-
-// }
-@media screen and (max-width: 500px) {
   .slogan {
     .slogan__travel {
       font-size: 2.5em;
     }
     .slogan__together {
       font-size: 2em;
-      // padding-right: 35%;
+      padding-right: 35%;
     }
     .slogan__company-name {
       font-size: 4.3em;
